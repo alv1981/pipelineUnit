@@ -19,6 +19,9 @@ int validatePipeline(String pipelineFile) {
 pipeline {
 
     agent any
+    tools {
+        gradle '8.0.2'
+    }
 
     parameters {
         booleanParam(name: 'VALIDATE', defaultValue: true, description: 'Whether to run validation stage')
@@ -70,14 +73,10 @@ pipeline {
         stage('build') {
 
             steps {
-                withEnv(["GRADLE_HOME=${tool name: 'GRADLE_3', type: 'hudson.plugins.gradle.GradleInstallation'}"]) {
-                    withEnv(["PATH=${env.PATH}:${env.GRADLE_HOME}/bin"]) {
-
-                        // Checking the env
-                        echo "GRADLE_HOME=${env.GRADLE_HOME}"
-                        echo "PATH=${env.PATH}"
+                script {
 
                         sh "gradle ${params.GRADLE_TASKS_OPTIONS}"
+                 }
                     }
                 }
             }
