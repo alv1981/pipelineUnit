@@ -76,9 +76,9 @@ pipeline {
                 script {
 
                         sh "gradle ${params.GRADLE_TASKS_OPTIONS}"
-                 }
-                    }
-                }
+                       }
+               }
+               
             }
         }
 
