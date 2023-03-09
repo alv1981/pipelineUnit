@@ -76,7 +76,7 @@ pipeline {
             steps {
                 script {
 
-                        sh "gradle ${params.GRADLE_TASKS_OPTIONS}"
+                        sh "java -version && gradle ${params.GRADLE_TASKS_OPTIONS}"
                        }
                 }
                
