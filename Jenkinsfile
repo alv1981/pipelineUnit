@@ -21,6 +21,7 @@ pipeline {
     agent any
     tools {
         gradle '8.0.2'
+        jdk '11'
     }
 
     parameters {
