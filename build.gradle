@@ -16,10 +16,11 @@ dependencies {
     /**
      * For Spock unit tests
      */
-    testImplementation 'org.spockframework:spock-core:1.1-groovy-2.4'
-    testImplementation 'cglib:cglib-nodep:3.2.2'
-    testImplementation 'org.objenesis:objenesis:1.2'
-    testImplementation 'org.assertj:assertj-core:3.7.0'
+    testImplementation 'org.spockframework:spock-core:2.0-M4-groovy-3.0'
+    testImplementation 'cglib:cglib-nodep:3.3.0'
+    testImplementation 'org.objenesis:objenesis:3.2'
+    testImplementation 'org.assertj:assertj-core:3.20.2'
+
 
 }
 
